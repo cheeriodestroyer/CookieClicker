@@ -1,0 +1,23 @@
+img {
+  width: 200px;
+  height: 200px;
+
+}
+
+img:hover {
+  width: 210px;
+  height: 210px;
+}
+
+button {
+  width: auto;
+  height: auto;
+  font-size: 20px;
+}
+
+body {
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSellCQ7c_2UoLjglFzjdwvsAkFNZ5Va4pT2yx3tDSMf1_4_uyh');
+  color: red;
+  font-family: fantasy;
+  text-align: center;
+}

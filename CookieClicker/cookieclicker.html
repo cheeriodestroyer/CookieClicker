@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel ="stylesheet" href="CookieClicker.css">
+
+  </head>
+  <body>
+    <h1>Cookie Clicker</h1>
+    <img id = "cookie" src="http://www.pngall.com/wp-content/uploads/2016/07/Cookie-PNG-Clipart.png">
+    <h2 id = "score"> Cookies: 0</h2>
+    <h3 id = 'factories'> Factories: 0</h3>
+    <button>Factory : 10 cookies </button>
+    <script>
+    var cookie = document.getElementById('cookie')
+    var score = document.getElementById('score')
+    var number = 0
+    var factory = document.querySelector('button')
+    var factoryScore = document.querySelector('h3')
+    var factoryNumber = 0
+    var factoryCost = 10
+
+    cookie.onclick = function() {
+      number = number + 1
+      score.innerHTML = 'Cookies: ' + number
+    }
+
+    factory.onclick = function() {
+      if (number >= 10) {
+        number = number - factoryCost
+        score.innerHTML = 'Cookies: ' + number
+        factoryNumber++
+        factoryScore.innerHTML = 'Factories: ' + factoryNumber
+        factoryCost = factoryCost + 10
+        factory.innerHTML = 'factory: ' + factoryCost + ' Cookies'
+
+      }
+    }
+
+    setInterval(function() {
+      number = number + factoryNumber
+      score.innerHTML = 'Cookies: ' + number
+
+    }, 1000)
+
+
+    </script>
+  </body>
+</html>
